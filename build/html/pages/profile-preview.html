@@ -1,0 +1,107 @@
+//= ../components/header.html
+
+<section class="profile pro-plus">
+    <div class="container">
+        <div class="profile-inner">
+            <a href="#" class="return-back"><span class="icon-arrow_left"></span>Back</a>
+            <div class="profile-wrapper">
+                <div class="profile__image">
+                    <img src="images/ava-1.png" class="circle-image" alt="">
+                    <span class="status">Pro Plus</span>
+                    <div class="contacts">
+                        <a href="#" class="popup-opener" data-popup="message"><span class="icon-email"></span>Message</a>
+                        <a href="#"><span class="icon-phone"></span>346-360-0040</a>
+                        <a href="#" class="popup-opener" data-popup="refer"><span class="icon-link"></span>Share</a>
+                    </div>
+                </div>
+                <div class="profile__info">
+                    <h2 class="name">Shaoshao Chung</h2>
+                    <p class="place">Chung Law Firm P.C.</p>
+                    <div class="review"><p>Tough, Smart divorce Lawyer</p></div>
+                    <div class="info-block">
+                        <h3>About <span class="dotted"></span></h3>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Practice Area <span class="dotted"></span></h3>
+                        <div class="tags">
+                            <span>Financial Services</span>
+                            <span>Trusts</span>
+                            <span>Discrimination</span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <h3>Culture, Heritage & Experience <span class="dotted"></span></h3>
+                        <div class="tags">
+                            <span>Vietnamese-American</span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <h3>Languages <span class="dotted"></span></h3>
+                        <div class="tags">
+                            <span>Vietnamese</span>
+                            <span>English</span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <h3>Social media <span class="dotted"></span></h3>
+                        <div class="social">
+                            <span class="icon-fb"></span>
+                            <span class="icon-linkedin"></span>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <h3>Contact <span class="dotted"></span></h3>
+                        <div class="contact-row">
+                            <span class="icon-location-g"></span>
+                            <p>12903 Ciceter Rd <br>Houston, TX 77039</p>
+                            <a href="#" class="link"><img src="images/map.svg"></a>
+                        </div>
+
+                        <div class="contact-row">
+                            <span class="icon-phone"></span>
+                            <p>346-360-0040</p>
+                        </div>
+                        <div class="contact-row">
+                            <span class="icon-fax-g"></span>
+                            <p>346-360-0040</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="profile-buttons">
+                <a href="#" class="btn btn-secondary">Edit information</a>
+                <button type="submit" class="btn btn-primary">Publish your profile</button>
+            </form>
+        </div>
+    </div>
+</section>
+//= ../components/footer-not-home.html
+//= ../components/popups-message.html
+<div class="popup-wrapper" id="confirm" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+        </div>
+        <div class="popup-content">
+            <div class="thank-you accept">
+                <img src="images/security.svg" alt="">
+                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
+                <button class="btn btn-primary">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+    $(document).ready(function () {
+        if(Cookies.get("confirm") === true || Cookies.get("confirm") === undefined) {
+            $("#confirm").attr("hidden", false);
+        }
+        else{
+            $("#confirm").attr("hidden", true);
+        }
+    });
+</script>
+</body>
+</html>

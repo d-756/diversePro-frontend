@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>search_white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="diversepro-home-main_color" transform="translate(-320.000000, -58.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Main">
+                <g id="left-panel">
+                    <path d="M323.258769,61.2587687 C327.603794,56.9137438 334.648471,56.9137438 338.993496,61.2587687 C343.097252,65.3625252 343.325124,71.874448 339.67711,76.2456435 L344,80.5695703 L342.56957,82 L338.246422,77.6764601 C333.875221,81.3251508 327.362769,81.0974961 323.258769,76.9934959 C318.913744,72.648471 318.913744,65.6037936 323.258769,61.2587687 Z M324.689198,62.6891984 C321.134178,66.2442188 321.134178,72.0080457 324.689198,75.5630661 C328.244219,79.1180866 334.008046,79.1180866 337.563066,75.5630661 C341.118087,72.0080457 341.118087,66.2442188 337.563066,62.6891984 C334.008046,59.134178 328.244219,59.134178 324.689198,62.6891984 Z" id="search_white"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

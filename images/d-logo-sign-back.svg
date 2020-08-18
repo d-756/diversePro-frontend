@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="706px" height="720px" viewBox="0 0 706 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>d-logo-sign-back</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.25" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.75" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.051479">
+        <g id="diversepro-home-circle" transform="translate(-367.000000, -2820.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Feedback" transform="translate(0.000000, 2330.000000)">
+                <path d="M710.058824,1210 L710.058824,1001.44828 L712.139188,1001.44828 C795.790423,1001.44828 863.603148,933.642573 863.603148,850 C863.603148,766.357427 795.790423,698.551724 712.139188,698.551724 L575.573322,698.551724 L575.573322,1001.44828 L575.588235,1001.44828 L575.588235,1210 L367,1210 L367,490 L712.139188,490 C910.982289,490 1072.17647,651.17749 1072.17647,850 C1072.17647,1048.82251 910.982289,1210 712.139188,1210 L710.058824,1210 Z" id="d-logo-sign-back"></path>
+            </g>
+        </g>
+    </g>
+</svg>

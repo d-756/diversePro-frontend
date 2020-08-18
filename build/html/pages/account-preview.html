@@ -1,0 +1,31 @@
+//= ../components/header-logged.html
+
+<section class="account-preview profile single-page-profile">
+    <div class="container">
+        <div class="profile-inner">
+            <div class="profile-top">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">My Profile</a></li>
+                </ul>
+                <a href="account-main.html" class="btn btn-primary close-preview">Close Preview</a>
+            </div>
+            <div class="profile-wrapper">
+                <div class="profile__image"></div>
+                <div class="profile__info"></div>
+            </div>
+        </div>
+    </div>
+</section>
+//= ../components/footer-not-home.html
+//= ../components/popups-message.html
+<script src="js/script.min.js"></script>
+<script>
+    var CaptchaCallback = function() {
+        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+    };
+</script>
+<script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+</body>
+</html>

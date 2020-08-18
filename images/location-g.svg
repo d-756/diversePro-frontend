@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>location-g</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+        <g id="diversepro-profile" transform="translate(-562.000000, -993.000000)" fill="#04002C">
+            <g id="Lawyers" transform="translate(180.000000, 240.000000)">
+                <g id="Contact" transform="translate(380.000000, 698.000000)">
+                    <g id="Address" transform="translate(2.000000, 40.000000)">
+                        <path d="M7.2,33 C7.2,33 0,27.9764502 0,22.2 C0,18.2235498 3.2235498,15 7.2,15 C11.1764502,15 14.4,18.2235498 14.4,22.2 C14.4,27.9764502 7.2,33 7.2,33 Z M7.2,24.9 C8.69116882,24.9 9.9,23.6911688 9.9,22.2 C9.9,20.7088312 8.69116882,19.5 7.2,19.5 C5.70883118,19.5 4.5,20.7088312 4.5,22.2 C4.5,23.6911688 5.70883118,24.9 7.2,24.9 Z" id="location-g"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,52 @@
+//= ../components/header.html
+
+<section class="profile pro single-page-profile">
+    <div class="container">
+        <div class="profile-inner">
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li><a href="/search.html?query=&page=1">Search</a></li>
+                <li class="active"><a href="#"></a></li>
+            </ul>
+            <div class="profile-wrapper">
+                <div class="profile__image"></div>
+                <div class="profile__info"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+//= ../components/popups-message.html
+<div class="popup-wrapper" id="confirm" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+        </div>
+        <div class="popup-content">
+            <div class="thank-you accept">
+                <img src="images/security.svg" alt="">
+                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
+                <button class="btn btn-primary">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if(Cookies.get("confirm") === true || Cookies.get("confirm") === undefined) {
+            $("#confirm").attr("hidden", false);
+        }
+        else{
+            $("#confirm").attr("hidden", true);
+        }
+    });
+    var CaptchaCallback = function() {
+        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+    };
+</script>
+<script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+
+</body>
+</html>

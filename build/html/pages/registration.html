@@ -1,0 +1,132 @@
+//= ../components/header.html
+
+<section class="register step1">
+    <div class="container">
+        <div class="register-wrapper">
+            <h2>Help clients find <span>You</span>.<br>Claim your profile.</h2>
+            <ul class="steps">
+                <li class="active">Step 1</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="search-profile">
+                <div class="reviews">
+                    <span class="icon-uni"></span>
+                    <div class="reg-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="review__single">
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dignissim elit. Etiam quis enim sed orci dignissim eleifend at id quam. Pellentesque molestie est nunc, nec elementum massa ullamcorpet.</p>
+                                    <div class="details">
+                                        <div class="image">
+                                            <img src="images/ava-2.png" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h4>Shaoshao Chung</h4>
+                                            <p>Houston</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review__single">
+                                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in dignissim elit. Etiam quis enim sed orci dignissim eleifend at id quam. Pellentesque molestie est nunc, nec elementum massa ullamcorpet.</p>
+                                    <div class="details">
+                                        <div class="image">
+                                            <img src="images/ava-2.png" alt="">
+                                        </div>
+                                        <div class="info">
+                                            <h4>Shaoshao Chung</h4>
+                                            <p>Houston</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navigation">
+                            <div class="icon-arrow-down reg-prev"></div>
+                            <div class="icon-arrow-down reg-next"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-profile__form">
+                    <h3>Find your profile</h3>
+                    <form class="find-profile">
+                        <div class="form-group">
+                            <input type="text" id="find-profile-name" placeholder="First and last name">
+                            <input type="text" id="find-profile-city" placeholder="City, state, or zip">
+                        </div>
+                        <button type="submit" class="btn">Find your profile</button>
+                    </form>
+                </div>
+            </div>
+            <a href="#why" class="to-bottom"><img src="images/arrow-down2.svg" alt=""></a>
+
+            <div class="why" id="why">
+                <h2>Why claim your<img src="images/diversepro-text-color.svg" alt="">profile?</h2>
+                <div class="why-wrapper">
+                    <div class="why__item">
+                        <div class="image">
+                            <img src="images/check.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>You’re in demand.</h4>
+                            <p>Legal consumers prefer culturally competent lawyers. You've got that!</p>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <div class="image">
+                            <img src="images/check.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>Optimize the relationship.</h4>
+                            <p>A culturally competent lawyer can help improve outcomes and enhance the quality of the legal representation.</p>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <div class="image">
+                            <img src="images/check.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>Enhance your visibility.</h4>
+                            <p>More and more legal consumers are going online to find lawyers. Use every tool available to you to attract them.</p>
+                        </div>
+                    </div>
+                    <div class="why__item">
+                        <div class="image">
+                            <img src="images/check.svg" alt="">
+                        </div>
+                        <div class="description">
+                            <h4>It’s free.</h4>
+                            <p>Claim your DiversePro profile for free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+//= ../components/footer-not-home.html
+
+//= ../components/popup-confirm.html
+
+<script src="https://www.paypal.com/sdk/js?client-id=AapS9ATS8Zq_9riImqFS01c-YPvCfNVupEONG4sAlK0OryMYFftNSRX17pNnQB_coaAw9lOs4pF525Go" data-namespace="paypal_sdk"> // Required. Replace SB_CLIENT_ID with your sandbox client ID. </script>
+<script src="js/script.min.js"></script>
+<script>
+    window.onbeforeunload = function() { return "Your work will be lost."; };
+    var CaptchaCallback = function() {
+
+    };
+</script>
+<script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+//= ../components/header-logged.html
+
+<section class="account-update acc-up" data-plan="Pro">
+    <div class="container">
+        <div class="account-update-wrapper">
+            <h2>Update your profile<span class="status pro">Pro</span></h2>
+            <form class="socials from-step8 from-step8-pro">
+                <h4>Add photo to your profile</h4>
+                <div class="upload-photo">
+                    <div id="upload-images"></div>
+                    <img src="images/user.png" id="uploadedImage" alt="">
+                    <div class="file-buttons">
+                        <input type="file" class="file-inputs" value="Upload photo">
+                        <button type="button" class="btn btn-secondary file-delete">Delete photo</button>
+                    </div>
+                </div>
+                <input class="styled-checkbox" id="styled-checkbox-10" type="checkbox" checked>
+                <label for="styled-checkbox-10">Yes, I'm accepting new clients!</label>
+                <h4>Add details about you</h4>
+                <div class="form-group">
+                    <textarea placeholder="Max 1050 characters" id="about" maxlength="1050"></textarea>
+                </div>
+                <div class="plan__item premium">
+                    <div class="plan__item-top">
+                        <p class="name center-text">Upgrade to Premium!</p>
+                    </div>
+                    <div class="plan__item-middle">
+                        <p>For only $49.99/mo, enhance your profile with:</p>
+                        <ul>
+                            <li>All benefits in Pro and Pro Plus subscription plans</li>
+                            <li>Enhanced search result profile display</li>
+                            <li>Add Keywords search tool</li>
+                            <li>Upload videos and photos</li>
+                            <li>Top priority in search results</li>
+                            <li>No competitive ads or lawyers on profile page</li>
+                        </ul>
+                    </div>
+                    <div class="plan__item-bottom">
+                        <button class="btn" data-link="account-update-premium.html" data-plan="premium">Upgrade</button>
+                    </div>
+                </div>
+                <div class="plan__item pro-plus">
+                    <div class="plan__item-top">
+                        <p class="name center-text">Upgrade to Pro Plus!</p>
+                    </div>
+                    <div class="plan__item-middle">
+                        <p>For only $24.99/mo, and enhance your profile with:</p>
+                        <ul>
+                            <li>All benefits in Pro subscription plan</li>
+                            <li>Personalized headline <br>("Tough, Smart Divorce Lawyer")</li>
+                            <li>Prioritized profile position
+                                in search results</li>
+                            <li>Add social media link</li>
+                            <li>Contact information prominently displayed in search results</li>
+                        </ul>
+                    </div>
+                    <div class="plan__item-bottom">
+                        <button class="btn" data-link="account-update-plus.html" data-plan="pro-plus">Upgrade</button>
+                    </div>
+                </div>
+                <div class="form-group group-buttons">
+                    <button onclick="location.href='account-main.html'" class="btn btn-secondary btn-preview" data-plan="pro-plus">Cancel</button>
+                    <button type="submit" class="btn btn-primary" data-plan="pro">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+
+<script src="js/script.min.js"></script>
+</body>
+</html>>

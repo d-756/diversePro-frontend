@@ -1,0 +1,114 @@
+<div class="popup-wrapper" id="confirm-phone" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you confirm">
+                <img src="images/security.svg" alt="">
+                <h2>Phone Verification</h2>
+                <p>Please verify your mobile phone number.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Mobile Phone</label>
+                        <input type="text" id="mobPhone" placeholder="Type here" disabled>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Code</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="confirm-phone-code" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+            <span class="icon-close"></span>
+        </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you confirm">
+                <img src="images/security.svg" alt="">
+                <h2>Phone Verification</h2>
+                <p>Verification code has been sent to <a href="#" class="phone-number">(847) 892-000</a>. <br>Please enter the verification code.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Code</label>
+                        <input type="text" id="confirmCode" placeholder="6-digit code" maxlength="6" minlength="6">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify</button>
+                </form>
+                <p class="description">Didn't receive a code? <a class="resend" id="resend">Resend</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="verification-email" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/mail.svg" alt="">
+                <h2>Email Verification</h2>
+                <p>You need to verify your email to complete registation. Verification link has been sent to your email address.</p>
+                <button type="submit" class="btn btn-primary">OK</button>
+                <p class="description">Didn't receive email? <a href="#">Resend</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="was-verified" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <form class="thank-you was-verified">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your mobile number <a href="#">(847) 892-000</a> was verified. </p>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="confirm" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you accept">
+                <img src="images/security.svg" alt="">
+                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
+                <button class="btn btn-primary">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="success-payment" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+        </div>
+        <div class="popup-content">
+            <form class="thank-you was-verified">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your payment was successful.</p>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </form>
+        </div>
+    </div>
+</div>

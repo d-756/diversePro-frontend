@@ -1,0 +1,46 @@
+//= ../components/header-logged.html
+
+<section class="account-main acc-m">
+    <div class="container">
+        <div class="account-main-wrapper">
+            <h2>Welcome back, <span>Shaoshao</span>!</h2>
+            <p class="description">Manage your account information</p>
+            <div class="account-main-links">
+                <a href="#" class="verify-email">Verify Email</a>
+                <a href="account-credentials.html">Username & Password</a>
+                <a href="" id="profile">Profile</a>
+                <a href="account-contact.html">Contact Info</a>
+                <a href="account-professional.html">Professional Info</a>
+                <a href="account-categories.html">Culture, Heritage, Language & Experience</a>
+                <a href="account-plans.html">Upgrade Subscription</a>
+                <a href="account-payment.html?edit=true">Payment Info</a>
+            </div>
+            <div class="buttons">
+                <a href="" id="preview" class="btn btn-secondary">Preview Profile</a>
+                <a href="#" class="btn btn-secondary sign-out">Logout</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+<div class="popup-wrapper" id="verification-email" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/mail.svg" alt="">
+                <h2>Email Verification</h2>
+                <p>Verification link has been sent to <span></span></p>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+</body>
+</html>

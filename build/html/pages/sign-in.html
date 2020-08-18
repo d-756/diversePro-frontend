@@ -1,0 +1,38 @@
+//= ../components/header.html
+
+<section class="signin-page">
+    <div class="container">
+        <h2>Lawyer Sign In</h2>
+        <!--        <div class="signin-linkedin">-->
+        <!--            <a href="#"><img src="images/linkedin.svg" alt="">Sign in with LinkedIn</a>-->
+        <!--        </div>-->
+        <!--        <div class="signin-or">or</div>-->
+        <form class="signin-form" method="get">
+            <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" id="username" placeholder="Type here">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="password" id="password" placeholder="Enter password">
+                <span class="icon-show toggle-password"></span>
+            </div>
+            <div class="form-group-flex">
+                <div class="remember">
+                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox">
+                    <label for="styled-checkbox-1">Remember me</label>
+                </div>
+                <a href="reset.html">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary sign-submit">Sign In</button>
+        </form>
+        <p class="signin-description">Don’t have an account? <a href="registration.html">Claim or create your profile here</a></p>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+
+<script src="js/script.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+//= ../components/header-logged.html
+
+<section class="account-contact acc-cat">
+    <div class="container">
+        <div class="account-contact-wrapper">
+            <h2>Add What Makes You Unique</h2>
+            <div class="reg-demographic">
+                <h3>Legal consumers are searching for culturally competent lawyers.<br>
+                    Help them find <span>You</span>.</h3>
+                <div class="reg-demographic__icons">
+                    <div class="icons-item">
+                        <span class="icon-sun"></span>
+                        Culture
+                    </div>
+                    <div class="icons-item">
+                        <span class="icon-ancient-scroll"></span>
+                        Heritage
+                    </div>
+                    <div class="icons-item">
+                        <span class="icon-translation"></span>
+                        Language
+                    </div>
+                    <div class="icons-item">
+                        <span class="icon-hourglass"></span>
+                        Experience
+                    </div>
+                </div>
+                <div class="reg-demographic__select">
+                    <h4>Categories</h4>
+                    <p class="text">Search and add up to 3 categories. Must select at least one category.</p>
+                    <select class="reg-demographic-selected" id="categories" name="categories[]" multiple="multiple" data-placeholder="Type here" required>
+                    </select>
+                    <span class="description">Examples: Asian, Mexican-American, Egyptian, LGBTQ+, Black, Nigerian, Lakota</span>
+                    <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox">
+                    <label for="styled-checkbox-3">I affirm that I meet DiversePro’s eligibility requirements. Visit <a href="terms.html" target="_blank">Terms of Use</a> for details.
+                        <div class="tooltip-info">
+                            <img src="images/info.svg" alt="">
+                            <p>Eligible lawyers are women, minority, or disabled lawyers and veterans or active duty service members. Visit <a href="terms.html" target="_blank">Terms of Use</a> for more details.</p>
+                        </div>
+                    </label>
+
+                    <h4>Do you speak other languages?</h4>
+                    <p class="text">If so, search and add up to 3 languages</p>
+                    <select class="reg-demographic-selected reg-lang-selected" id="languages" name="categories[]" multiple="multiple" data-placeholder="Type here">
+                    </select>
+                    <span class="description">By adding a language, you affirm that you can personally communicate effectively with a legal consumer in the selected language.</span>
+                    <div class="form-submit categories-button">
+                        <a href="account-main.html" class="btn btn-secondary">Cancel</a>
+                        <button class="btn btn-primary">Update</button>
+                        <span class="description">By pressing "Update" you confirm that the information provided above<br>is true to the best of your knowledge.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

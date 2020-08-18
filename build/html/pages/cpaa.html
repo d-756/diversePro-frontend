@@ -1,0 +1,145 @@
+//= ../components/header.html
+
+<section class="cpaa-page">
+    <div class="container">
+        <h2>Privacy Contact Form</h2>
+        <form class="cpaa-form step1">
+            <div class="form-group">
+                <h4>I am submitting a request for</h4>
+                <input type="radio" class="radio" id="request" name="request" required>
+                <label for="request">Myself</label>
+                <input type="radio" class="radio" id="request2" name="request" required>
+                <label for="request2">Someone Else</label>
+            </div>
+            <div class="form-group" style="display: none">
+                <h4>I affirm that I am a California resident as defined by Section 17014 of Title 18 of the California Code of Regulations.</h4>
+                <input type="radio" class="radio" id="resident" name="resident" required>
+                <label for="resident">Yes</label>
+                <input type="radio" class="radio" id="resident2" name="resident" required>
+                <label for="resident2">No</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Next</button>
+        </form>
+        <div class="step2-block">
+            <form class="cpaa-form step2">
+                <h3>Personal details</h3>
+                <b></b>
+                <div class="form-group">
+                    <label for="firstname">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstname" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="middlename">Middle Name</label>
+                    <input type="text" id="middlename" placeholder="Type here">
+                </div>
+                <div class="form-group">
+                    <label for="maidenname">Maiden Name</label>
+                    <input type="text" id="maidenname" placeholder="Type here">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastname" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile Phone <span class="required">*</span></label>
+                    <input type="text" id="phone" class="phone-format" placeholder="Type here" required>
+                </div>
+                <h3>Address</h3>
+                <b></b>
+                <div class="form-group">
+                    <label for="address">Address <span class="required">*</span></label>
+                    <input type="text" id="address" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="suite">Suite</label>
+                    <input type="text" id="suite" placeholder="Type here">
+                </div>
+                <div class="form-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" placeholder="Type here" required>
+                </div>
+                <div class="form-group small">
+                    <label for="state">State <span class="required">*</span></label>
+                    <input type="text" id="state" placeholder="Type here" required>
+                </div>
+                <div class="form-group small">
+                    <label for="zip">Zip <span class="required">*</span></label>
+                    <input type="text" id="zip" placeholder="Type here" required>
+                </div>
+                <h3>Leave a comment</h3>
+                <b></b>
+                <div class="form-group large">
+                    <label for="comment">Comment <span class="required">*</span></label>
+                    <textarea id="comment" placeholder="Type here" required></textarea>
+                </div>
+                <div class="form-bottom">
+                    <p class="description">We respect the privacy of your personal information. The information you provide here will only be used to determine opt-out eligibility and to process your opt-out request.</p>
+                    <div class="g-recaptcha" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                    <div class="text-danger" id="recaptchaError-refer"></div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+//= ../components/footer-not-home.html
+<div class="popup-wrapper" id="cpaa-not-resident" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you cpaa">
+                <img src="images/warning.svg" alt="">
+                <h2>Thank you for your request</h2>
+                <p>You must be an authorized representative of a California resident as defined by section 17014 of Title 18 of the California Code of Regulation.</p>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="cpaa-myself-not-resident" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you cpaa">
+                <img src="images/warning.svg" alt="">
+                <h2>Thank you for your request</h2>
+                <p>At this time only California residents are eligible for rights under Title 18 of the California Code of Regulation.</p>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="cpaa-success" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your request has been submitted.</p>
+                <button class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

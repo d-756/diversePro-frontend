@@ -1,0 +1,55 @@
+//= ../components/header.html
+
+<section class="contacts-page">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form class="contacts-form">
+            <div class="form-group">
+                <label for="name" class="name-label">Your Name</label>
+                <input type="text" id="name" placeholder="Type here">
+            </div>
+            <div class="form-group">
+                <label for="email" class="email-label">Your Email Address</label>
+                <input type="email" id="email" placeholder="Type here">
+            </div>
+            <div class="form-group">
+                <label for="subject" class="subject-label">Subject</label>
+                <input type="text" id="subject" placeholder="Type here">
+            </div>
+            <div class="form-group">
+                <label for="message" class="message-error">Message</label>
+                <textarea id="message" placeholder="Type here"></textarea>
+            </div>
+            <div class="form-group">
+                <span class="form-bold">Sender Verification</span>
+                <p class="description">To protect against spamming, please complete verification.</p>
+                <div class="g-recaptcha" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                <div class="text-danger" id="recaptchaError-refer"></div>
+            </div>
+            <button type="submit" class="btn btn-primary contact-submit">Send</button>
+        </form>
+    </div>
+</section>
+<div class="popup-wrapper" id="contact-success" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your message was sent</p>
+                <button class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+//= ../components/footer-not-home.html
+
+<script src="js/script.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+$blackColor:#04002C;
+$whiteColor:#fff;
+$blueColor:#1EAFBD;
+
+.hero-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  max-width: 100%;
+  .input-block {
+    flex: 0 0 calc(100% - 520px);
+    max-width: calc(100% - 520px);
+    @media (max-width: 1100px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    input {
+      display: block;
+      width: 100%;
+      padding: 30px 40px;
+      font-size: 18px;
+      color: $blackColor;
+      letter-spacing: 0;
+      line-height: 20px;
+      border-radius: 0;
+      border: none;
+
+      @media (max-width: 1100px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: 767px) {
+        padding: 12px 20px;
+        height: 60px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      &::placeholder {
+        opacity: 0.25;
+        font-size: 18px;
+        color: $blackColor;
+        letter-spacing: 0;
+        line-height: 20px;
+        transition: all 400ms;
+        @media (max-width: 767px) {
+          //white-space: normal;
+          max-width: 100%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+      &:focus {
+        &::placeholder {
+          text-indent: 20px;
+          opacity: 0;
+          @media (max-width: 767px) {
+            text-indent: 0;
+
+          }
+        }
+      }
+    }
+  }
+  .select-block {
+    flex: 0 0 280px;
+    position: relative;
+    @media (max-width: 1100px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    &::before {
+      content: '';
+      width: 0;
+      border-left: 1px rgba($blackColor,.2) solid;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 40px;
+      margin-top: -20px;
+      z-index: 2;
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+    input{
+      display: block;
+      width: 100%;
+      padding: 30px 40px;
+      font-size: 18px;
+      color: $blackColor;
+      letter-spacing: 0;
+      line-height: 20px;
+      border-radius: 0;
+      border: none;
+      @media (max-width: 767px) {
+        padding: 12px 20px;
+        height: 60px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      &::placeholder {
+        opacity: 0.25;
+        font-size: 18px;
+        color: $blackColor;
+        letter-spacing: 0;
+        line-height: 20px;
+        transition: all 400ms;
+        @media (max-width: 767px) {
+          //white-space: normal;
+          max-width: 100%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+      &:focus {
+        &::placeholder {
+          text-indent: 20px;
+          opacity: 0;
+          @media (max-width: 767px) {
+            text-indent: 0;
+
+          }
+        }
+      }
+    }
+  }
+  .button-block {
+    flex: 0 0 240px;
+    max-width: 240px;
+
+    @media (max-width: 1100px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+    .btn {
+      padding: 30px 40px;
+      text-align: center;
+      display: block;
+      font-size: 14px;
+      color: $whiteColor;
+      letter-spacing: 1px;
+      line-height: 18px;
+      width: 100%;
+      @media (max-width: 1100px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      @media (max-width: 767px) {
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.79px;
+      }
+    }
+  }
+}
+.select2-container--default .select2-selection--single {
+  &.no-style-select {
+    border: none;
+    height: auto;
+    border-radius: 0;
+    .select2-selection__rendered {
+      padding: 30px 40px;
+      font-size: 18px;
+      color: $blackColor;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+    .select2-selection__arrow {
+      display: none;
+    }
+  }
+}
+.form-notification {
+  font-size: 18px;
+  color: $whiteColor;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-bottom: 0;
+
+  a {
+    color: $blueColor;
+    text-decoration: underline;
+    &:hover {
+      color: $whiteColor;
+    }
+  }
+  @media (max-width: 767px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  label {
+    font-size: 16px;
+    color: #04002C;
+    letter-spacing: 0;
+    line-height: 20px;
+    margin-bottom: 10px;
+    @media(max-width: 767px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  input, textarea {
+    font-size: 16px;
+    color: #04002C;
+    letter-spacing: 0;
+    line-height: 20px;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    @media (max-width: 767px){
+      padding: 15px;
+    }
+    &::-webkit-input-placeholder {
+      color: #04002c40;
+    }
+    &.busy{
+      border: solid 1px #dc1e1e !important;
+      & + img{
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        & + p.error{
+          font-size: 14px !important;
+          line-height: 1.43 !important;
+          color: #dc1e1e !important;
+          margin-top: 10px !important;
+        }
+      }
+      &.sign-in{
+        &+span {
+          & + .error-sign {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            p {
+              font-size: 14px;
+              line-height: 1.43;
+              color: #dc1e1e;
+              margin-bottom: 0;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+    &.password{
+      &+span.toggle-password{
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        color: $blackColor;
+        opacity: 0.25;
+        top: 50px;
+        font-size: 22px;
+        @media (max-width: 767px){
+          top: 42px;
+        }
+      }
+    }
+  }
+  textarea{
+    height: 120px;
+    resize: none;
+  }
+}
+.dropzone{
+  border: dashed 1px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 35px 20px 30px;
+  .dz-message{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: rgba(4, 0, 44, 0.25);
+    margin: 15px 0 0;
+    span{
+      color: $blueColor;
+    }
+  }
+}
+.right-to-left{
+  .hero-search-form{
+    .select-block{
+      &:before{
+        left: unset;
+        right: 0;
+      }
+    }
+  }
+  .pac-item{
+    text-align: right;
+  }
+}

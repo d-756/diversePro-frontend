@@ -1,0 +1,92 @@
+//= ../components/header-logged.html
+
+<section class="account-plans acc-pl">
+    <div class="container">
+        <div class="account-plans-wrapper">
+            <h2>Upgrade subscription plan</h2>
+            <div class="plan-wrapper">
+                <div class="plan__item premium">
+                    <img src="images/bookmark.svg" class="bookmark" alt="">
+                    <div class="plan__item-top">
+                        <p class="name">Premium</p>
+                        <p class="price">$49.99/mo <span>(annual subscription)</span></p>
+                    </div>
+                    <div class="plan__item-middle">
+                        <ul>
+                            <li>All benefits in Pro and Pro Plus subscription plans</li>
+                            <li>Enhanced search result profile display</li>
+                            <li>Add Keywords search tool</li>
+                            <li>Upload videos and photos</li>
+                            <li>Top priority in search results</li>
+                            <li>No competitive ads or lawyers on profile page</li>
+                        </ul>
+                    </div>
+                    <div class="plan__item-bottom">
+                        <button class="btn" data-link="account-update-premium.html" data-plan="premium">Upgrade</button>
+                    </div>
+                </div>
+                <div class="plan__item pro-plus">
+                    <div class="plan__item-top">
+                        <p class="name">Pro Plus</p>
+                        <p class="price">$24.99/mo <span>(annual subscription)</span></p>
+                    </div>
+                    <div class="plan__item-middle">
+                        <ul>
+                            <li>All benefits in Pro subscription plan</li>
+                            <li>Personalized headline <br>("Tough, Smart Divorce Lawyer")</li>
+                            <li>Prioritized profile position
+                                in search results</li>
+                            <li>Add social media link</li>
+                            <li>Contact information prominently displayed in search results</li>
+                        </ul>
+                    </div>
+                    <div class="plan__item-bottom">
+                        <button class="btn" data-link="account-update-plus.html" data-plan="pro-plus">Upgrade</button>
+                    </div>
+                </div>
+                <div class="plan__item pro">
+                    <div class="plan__item-top">
+                        <p class="name">Pro</p>
+                        <p class="price">Free</p>
+                    </div>
+                    <div class="plan__item-middle">
+                        <ul>
+                            <li>Limited personalization</li>
+                            <li>Upload headshot</li>
+                            <li>Add or update your personal and professional information</li>
+                        </ul>
+                    </div>
+                    <div class="plan__item-bottom">
+                        <button class="btn" data-plan="pro">Current</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cancel-subscription">
+                <a href="account-main.html" class="btn btn-secondary">Back to Dashboard</a>
+                <a href="#" class="btn btn-secondary popup-opener" data-popup="cancel-sub">Cancel Subscription</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="popup-wrapper" id="cancel-sub" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/warning.svg" alt="">
+                <h2>Cancel Subscription</h2>
+                <p>You are canceling your current subscription. Subscriptions are non-refundable. Please see DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> for more detail.</p>
+                <button class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+//= ../components/footer-not-home.html
+
+<script src="js/script.min.js"></script>
+</body>
+</html>

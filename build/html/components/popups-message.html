@@ -1,0 +1,188 @@
+<div class="popup-wrapper" id="refer" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content refer">
+            <h2>Share Lawyer Profile</h2>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="recEmail">Recipient Email Address</label>
+                    <input id="recEmail" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input id="email" placeholder="Type here" autocomplete="offa" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input id="subject" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="refer-message">Message</label>
+                    <textarea id="refer-message" placeholder="Max 600 characters" required></textarea>
+                </div>
+                <div class="form-group">
+                    <span class="form-bold">Sender Verification</span>
+                    <p class="description">To protect against spamming, please complete verification.</p>
+                    <div id="RecaptchaField1" class="g-recaptcha" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                    <div class="text-danger" id="recaptchaError-refer"></div>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-bold">Disclaimer</span>
+                    <p class="description">By pressing "Send," you agree that this message is being sent through an intermediary and you have no reasonable expectation of privacy for your identity or content of the message.</p>
+                </div>
+                <button type="submit" class="btn btn-primary search-filter-btn">Send</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="message" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content refer">
+            <h2>Message Lawyer</h2>
+            <p class="name">To:<img src="images/ava-1.png" alt=""><span>Shaoshao Chung</span></p>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input id="name" placeholder="Type here" autocomplete="offa" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Your Phone</label>
+                    <input id="phone" class="phone-format-single" autocomplete="offa" placeholder="Type here">
+                </div>
+                <div class="form-group">
+                    <label for="your-email">Your Email Address</label>
+                    <input id="your-email" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="your-subject">Message subject</label>
+                    <input id="your-subject" placeholder="Type here" required>
+                </div>
+                <div class="form-group">
+                    <label for="your-message">Message</label>
+                    <textarea id="your-message" placeholder="Max 250 characters" required></textarea>
+                </div>
+                <div class="form-group">
+                    <span class="form-bold">Sender Verification</span>
+                    <p class="description">To protect against spamming, please complete verification.</p>
+                    <div id="RecaptchaField2" class="g-recaptcha" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                    <div class="text-danger" id="recaptchaError-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-bold">Disclaimer</span>
+                    <p class="description">By pressing "Send", you agree that this message is being sent through an intermediary and you have no reasonable expectation of privacy for your identity or content of the message.</p>
+                </div>
+                <button type="submit" class="btn btn-primary search-filter-btn">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="share-results" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content refer">
+            <h2>Share Search Results</h2>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="share-rec">Recipient Email Address</label>
+                    <input id="share-rec" type="email" placeholder="Type here" autocomplete="offa" required>
+                </div>
+                <div class="form-group">
+                    <label for="share-email">Your Email Address</label>
+                    <input id="share-email" type="email" placeholder="Type here" autocomplete="offa" required>
+                </div>
+                <div class="form-group">
+                    <label for="share-subject">Subject</label>
+                    <input id="share-subject" placeholder="Type here" value="Hi, I thought you might be interested in these lawyers." autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="share-message">Message</label>
+                    <textarea id="share-message" placeholder="Max 600 characters"></textarea>
+                </div>
+                <div class="form-group">
+                    <span class="form-bold">Sender Verification</span>
+                    <p class="description">To protect against spamming, please complete verification.</p>
+                    <div class="g-recaptcha" id="RecaptchaField4" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                    <div class="text-danger" id="recaptchaError-share"></div>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-bold">Disclaimer</span>
+                    <p class="description">By pressing "Send", you agree that this message is being sent through an intermediary and you have no reasonable expectation of privacy for your identity or content of the message.</p>
+                </div>
+                <button type="submit" class="btn btn-primary search-filter-btn">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="email-success" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your message to <span>Shaoshao Chung</span> was sent.</p>
+                <button class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="refer-success" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>You shared this profile.</p>
+                <button class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup-wrapper" id="share-success" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>You shared your search results.</p>
+                <button class="btn btn-primary">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

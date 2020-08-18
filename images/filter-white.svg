@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.2 (81672) - https://sketch.com -->
+    <title>filter-white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Search-mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5-diversepro-search_result-m" transform="translate(-120.000000, -252.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Lawyers" transform="translate(20.000000, 140.000000)">
+                <g id="btn" transform="translate(0.000000, 93.000000)">
+                    <g id="filter-white" transform="translate(100.000000, 19.000000)">
+                        <path d="M9.5,7.07266923 C8.63362728,6.82266666 8,6.02379066 8,5.07692308 C8,4.1300555 8.63362728,3.3311795 9.5,3.08117692 L9.5,0 L10.5,0 L10.5,3.04312267 C11.4441724,3.23851952 12.1538462,4.0748447 12.1538462,5.07692308 C12.1538462,6.07900145 11.4441724,6.91532663 10.5,7.11072348 L10.5,13 L9.5,13 L9.5,7.07266923 Z M1.5,10.0726692 C0.633627282,9.82266666 4.88054042e-13,9.02379066 4.88054042e-13,8.07692308 C4.88054042e-13,7.1300555 0.633627282,6.3311795 1.5,6.08117692 L1.5,0 L2.5,0 L2.5,6.04312267 C3.44417239,6.23851952 4.15384615,7.0748447 4.15384615,8.07692308 C4.15384615,9.07900145 3.44417239,9.91532663 2.5,10.1107235 L2.5,13 L1.5,13 L1.5,10.0726692 Z" id="filter"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

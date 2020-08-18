@@ -1,0 +1,162 @@
+//= ../components/header.html
+
+<section class="search-results">
+    <div class="container">
+        <div class="search-results-inner">
+            <div class="left-side">
+                <h2 class="title">Search Results</h2>
+            </div>
+            <div class="search-buttons">
+                <a href="#" class="share-search compare">
+                    <span class="icon-checked-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13">
+                            <path fill="#FFF" d="M139.755 25.09L128.074 36.879 122 30.747 123.082 29.657 128.074 34.698 138.673 24z" transform="translate(-122 -24)"/>
+                        </svg>
+                    </span>
+                    Compare
+                </a>
+                <a href="#" class="share-search popup-opener" data-popup="share-results"><span class="icon-link"></span>Share search results</a>
+            </div>
+        </div>
+        <div class="mobile-filter"><span class="icon-filter"></span>Filter</div>
+        <div class="results-wrapper">
+            <div class="results-filter">
+                <div class="results-filter-top">
+                    <span class="icon-arrow-down results-filter-top__back"></span>
+                    <p class="results-filter-top__name">Filters</p>
+                    <div>
+                        <a href="/" class="results-filter-top__new-search">New Search</a>
+                        <a href="#" class="results-filter-top__reset" id="reset-dropdown">Reset All</a>
+                    </div>
+                </div>
+                <form class="results-filter-form" onkeydown="return event.key != 'Enter';">
+                    <div class="form-group">
+                        <label for="culture">Culture, Heritage & Experience</label>
+                        <select id="culture" class="search-select">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="language">Language</label>
+                        <select id="language" class="search-select">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">Practice Area</label>
+                        <select id="area" class="search-select">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialty">Specialty</label>
+                        <select id="specialty" class="search-select">
+                            <option></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Type here">
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Years of Experience</label>
+                        <select id="experience" class="search-select">
+                            <option></option>
+                            <option value="any">Any</option>
+                            <option value="1-5">1-5</option>
+                            <option value="6-10">6-10</option>
+                            <option value="11-20">11-20</option>
+                            <option value="21%2B">21+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="keyword">Keyword (type and press "enter")</label>
+                        <select class="keywords-selected" id="keyword" name="keywords[]" multiple="multiple" data-placeholder="Type here">
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary search-filter-btn">Apply</button>
+                </form>
+            </div>
+            <div class="results-people">
+                <div class="results-block-people">
+
+                </div>
+                <div class="search-buttons-bottom">
+                    <a href="#" class="share-search compare">
+                    <span class="icon-checked-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13">
+                            <path fill="#FFF" d="M139.755 25.09L128.074 36.879 122 30.747 123.082 29.657 128.074 34.698 138.673 24z" transform="translate(-122 -24)"/>
+                        </svg>
+                    </span>
+                        Compare
+                    </a>
+                    <a href="#" class="share-search popup-opener" data-popup="share-results"><span class="icon-link"></span>Share search results</a>
+                </div>
+                <div class="captcha">
+                    <div class="g-recaptcha" id="RecaptchaField3" data-sitekey="6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM"></div>
+                    <div class="text-danger" id="recaptchaError-search"></div>
+                </div>
+                <div class="pagination">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+//= ../components/footer-not-home.html
+//= ../components/popups-message.html
+
+<div class="popup-wrapper" id="confirm" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+        </div>
+        <div class="popup-content">
+            <div class="thank-you accept">
+                <img src="images/security.svg" alt="">
+                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
+                <button class="btn btn-primary">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if(Cookies.get("confirm") === true || Cookies.get("confirm") === undefined) {
+            $("#confirm").attr("hidden", false);
+        }
+        else{
+            $("#confirm").attr("hidden", true);
+        }
+    });
+    var CaptchaCallback = function() {
+        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+        grecaptcha.render('RecaptchaField3', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+        grecaptcha.render('RecaptchaField4', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+    };
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var input = document.getElementById('location');
+        var options = {
+            types: ['(regions)'],
+            componentRestrictions: {country: ["us"]}
+        };
+        var autocomplete = new google.maps.places.Autocomplete(input, options);
+        google.maps.event.addDomListener(autocomplete, 'place_changed', function() {
+            var place = autocomplete.getPlace();
+
+            var rquiredAddress = place.formatted_address.slice(0, place.formatted_address.lastIndexOf(","));
+
+            $("#location").val(rquiredAddress);
+        });
+    }
+
+</script>
+<script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTvL7Pzl7b6WUhtOZQiQg_tM-Zdp1PXrg&libraries=places&language=en&region=US&callback=initialize"
+        async defer></script>
+</body>
+</html>
