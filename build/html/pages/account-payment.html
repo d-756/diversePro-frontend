@@ -5,27 +5,22 @@
         <div class="account-contact-wrapper">
             <h2>Payment details</h2>
             <div class="payment-form">
-                <h3>Payment details</h3>
-                <ul class="payments-method">
-                    <li data-tab="visa" class="active"><img src="images/mastercard.png" width="46" height="38" alt=""><img src="images/discover.png" width="47" height="30" alt=""><img src="images/AXP.png" width="40" height="30" alt=""><img src="images/visa.png" width="53" height="30" alt=""></li>
-                    <li data-tab="paypal" class=""><img src="images/paypal.png" width="80" height="40" alt=""></li>
-                </ul>
                 <form id="visa" class="pci active">
                     <div class="form-group">
                         <label for="cardholdername">Cardholder Name</label>
-                        <input type="text" id="cardholdername" placeholder="Cardholder Name">
+                        <input type="text" id="cardholdername" placeholder="Cardholder Name" required>
                     </div>
                     <div class="form-group">
                         <label for="cardnumber">Card Number</label>
-                        <input id="cardnumber" placeholder="Card Number">
+                        <input id="cardnumber" placeholder="Card Number" required>
                     </div>
                     <div class="form-group small">
                         <label for="expirationdate">Expiration Date</label>
-                        <input id="expirationdate" placeholder="MM/YY">
+                        <input id="expirationdate" placeholder="MM/YY" required>
                     </div>
                     <div class="form-group small">
                         <label for="cvc">CVC</label>
-                        <input type="password" id="cvc">
+                        <input type="password" id="cvc" required>
                     </div>
                     <h3>Billing address</h3>
                     <div class="form-group">
@@ -42,7 +37,70 @@
                     </div>
                     <div class="form-group small">
                         <label for="bilstate">State</label>
-                        <input type="text" id="bilstate" placeholder="Type here" maxlength="2">
+                        <select id="bilstate" class="add-info-select">
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="DC">DC</option>
+                            <option value="FM">FM</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MH">MH</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PW">PW</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                            <option value="AS">AS</option>
+                            <option value="GU">GU</option>
+                            <option value="MP">MP</option>
+                            <option value="PR">PR</option>
+                            <option value="UM">UM</option>
+                            <option value="VI">VI</option>
+                            <option value="AA">AA</option>
+                            <option value="AP">AP</option>
+                            <option value="AE">AE</option>
+                        </select>
                     </div>
                     <div class="form-group small">
                         <label for="bilzip">Zip</label>
@@ -53,21 +111,7 @@
                     <h5 class="total-price">Total: $<span></span></h5>
                     <div class="form-submit">
                         <a href="account-main.html" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Update</button>
-                    </div>
-                </form>
-                <form id="paypal" class="pci">
-                    <script
-                            src="https://www.paypal.com/sdk/js?client-id=AapS9ATS8Zq_9riImqFS01c-YPvCfNVupEONG4sAlK0OryMYFftNSRX17pNnQB_coaAw9lOs4pF525Go" data-namespace="paypal_sdk"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
-                    </script>
-
-                    <div id="paypal-button-container"></div>
-                    <h5 class="cost-price">Subscription upgrade cost: $<span></span></h5>
-                    <h5 class="tax-price">Sales tax: $<span></span></h5>
-                    <h5 class="total-price">Total: $<span></span></h5>
-                    <div class="form-submit">
-                        <a href="account-main.html" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Upgrade</button>
                     </div>
                 </form>
             </div>
@@ -94,4 +138,5 @@
 
 <script src="js/script.min.js"></script>
 </body>
+
 </html>

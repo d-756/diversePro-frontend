@@ -20,6 +20,13 @@
                 <div class="form-group">
                     <textarea placeholder="Max 1050 characters" id="about" maxlength="1050"></textarea>
                 </div>
+                <h4>Add website</h4>
+                <div class="form-group">                  
+                    <div class="col-md-12" style="padding-left: 0">
+                        <span class="col-md-2 mr-1" style="padding-left: 0">https://</span>
+                        <input class="col-md-7" id="website-link" placeholder="Enter your website URL" autocomplete="off">
+                    </div>
+                </div>
                 <h4>Add a personalized headline</h4>
                 <div class="form-group">
                     <input id="headline" placeholder="Your personalized headline" maxlength="50">
@@ -29,35 +36,46 @@
                 <h4>Add Keywords</h4>
                 <div class="form-group">
                     <p>Add up to 20 keywords (Add keyword by pressing "Enter")</p>
-                    <select class="keywords-selected" name="keywords[]" multiple="multiple" data-placeholder="Type here">
+                    <select class="keywords-selected" name="keywords[]" multiple="multiple"
+                        data-placeholder="Type here">
 
                     </select>
-                    <p class="description">Help clients find you with unique keywords (e.g. CCPA, mandamus, anti-SLAPP)</p>
+                    <p class="description">Help clients find you with unique keywords (e.g. CCPA, mandamus, anti-SLAPP)
+                    </p>
                 </div>
                 <h4>Add social media to your profile</h4>
                 <div class="form-group">
-                    <label for="facebook">Facebook</label>
-                    <input id="facebook" placeholder="Link to your profile" autocomplete="off">
+                    <div class="col-md-12" style="padding-left: 0">
+                        <span class="col-md-2 mr-1" style="padding-left: 0">https://facebook.com/</span>
+                        <input class="col-md-7" id="facebook" placeholder="Enter Your ID" autocomplete="off">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="linkedIn">LinkedIn</label>
-                    <input id="linkedIn" placeholder="Link to your profile" autocomplete="off">
+                    <div class="col-md-12" style="padding-left: 0">
+                        <span class="col-md-2" style="padding-left: 0">https://linkedin.com/in/</span>
+                        <input class="col-md-7" id="linkedIn" placeholder="Enter Your ID" autocomplete="off">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="instagram">Instagram</label>
-                    <input id="instagram" placeholder="Link to your profile" autocomplete="off">
+                    <div class="col-md-12" style="padding-left: 0">
+                        <span class="col-md-2" style="padding-left: 0">https://instagram.com/</span>
+                        <input class="col-md-7" id="instagram" placeholder="Enter Your ID" autocomplete="off">
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="twitter">Twitter</label>
-                    <input id="twitter" placeholder="Link to your profile" autocomplete="off">
+                    <div class="col-md-12" style="padding-left: 0">
+                        <span class="col-md-2" style="padding-left: 0; margin-right: 30px">https://twitter.com/</span>
+                        <input class="col-md-7" id="twitter" placeholder="Enter Your ID" autocomplete="off">
+                    </div>
                 </div>
-                <h4>Photos and videos</h4>
+                <h4>Photos</h4>
                 <div class="dropzone" id="premium-dropzone">
                     <img src="images/upload.svg" alt="">
                     <div class="dz-message" data-dz-message>Drag and drop here or <span>browse</span> to upload</div>
                 </div>
                 <div class="form-group group-buttons">
-                    <button onclick="location.href='account-main.html'" class="btn btn-secondary btn-preview" data-plan="pro-plus">Cancel</button>
+                    <button onclick="location.href='account-main.html'" class="btn btn-secondary btn-preview"
+                        data-plan="pro-plus">Cancel</button>
                     <button type="submit" class="btn btn-primary" data-plan="premium">Update</button>
                 </div>
             </form>
@@ -72,8 +90,22 @@
     Dropzone.autoDiscover = false;
     var dropzone_default = new Dropzone("#premium-dropzone", {
         url: '/',
-        maxFiles: 1
+        uploadMultiple: true,
+        parallelUploads: 10,
+        maxFilesize: 50,
+        addRemoveLinks: true,
+        autoProcessQueue: false,
+        timeout: 60000,
+        acceptedFiles: 'image/*',
+        // accept: function(file, done) {
+        //     console.log(file);
+        //     if (file.type != "image/jpeg" && file.type != "image/png") {
+        //         done("Error! Files of this type are not accepted");
+        //     }
+        //     else { done(); }
+        // }
     });
 </script>
 </body>
+
 </html>

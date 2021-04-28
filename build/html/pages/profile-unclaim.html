@@ -19,6 +19,7 @@
 
 //= ../components/footer-not-home.html
 //= ../components/popups-message.html
+//= ../components/popup-confirm.html
 <div class="popup-wrapper" id="confirm" hidden>
     <div class="popup" id="popup">
         <div class="popup-header">
@@ -26,7 +27,8 @@
         <div class="popup-content">
             <div class="thank-you accept">
                 <img src="images/security.svg" alt="">
-                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
+                <p>You must accept DiversePro's <a href="terms.html" target="_blank">Terms of Use</a> and <a
+                        href="privacy.html" target="_blank">Privacy Policy</a> to proceed.</p>
                 <button class="btn btn-primary">I Accept</button>
             </div>
         </div>
@@ -35,19 +37,23 @@
 <script src="js/script.min.js"></script>
 <script>
     $(document).ready(function () {
-        if(Cookies.get("confirm") === true || Cookies.get("confirm") === undefined) {
+        if (Cookies.get("confirm") === true || Cookies.get("confirm") === undefined) {
             $("#confirm").attr("hidden", false);
-        }
-        else{
+        } else {
             $("#confirm").attr("hidden", true);
         }
     });
-    var CaptchaCallback = function() {
-        grecaptcha.render('RecaptchaField1', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
-        grecaptcha.render('RecaptchaField2', {'sitekey' : '6Lf58MMUAAAAADTt9hFqPtejb4nK8fxUgtLtRDoM'});
+    var CaptchaCallback = function () {
+        grecaptcha.render('RecaptchaField1', {
+            'sitekey': '6LdyrMgZAAAAALg5Lav0tZYREW3gpMJyVBMrDnE4'
+        });
+        grecaptcha.render('RecaptchaField2', {
+            'sitekey': '6LdyrMgZAAAAALg5Lav0tZYREW3gpMJyVBMrDnE4'
+        });
     };
 </script>
 <script src='https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit' async defer></script>
 
 </body>
+
 </html>

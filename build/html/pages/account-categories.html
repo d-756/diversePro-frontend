@@ -32,13 +32,24 @@
                     </select>
                     <span class="description">Examples: Asian, Mexican-American, Egyptian, LGBTQ+, Black, Nigerian, Lakota</span>
                     <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox">
-                    <label for="styled-checkbox-3">I affirm that I meet DiversePro’s eligibility requirements. Visit <a href="terms.html" target="_blank">Terms of Use</a> for details.
+                    <label for="styled-checkbox-3">
+                        I affirm that I meet DiversePro’s eligibility requirements. Visit <a href="terms.html" target="_blank">Terms of Use</a> for details.
                         <div class="tooltip-info">
                             <img src="images/info.svg" alt="">
                             <p>Eligible lawyers are women, minority, or disabled lawyers and veterans or active duty service members. Visit <a href="terms.html" target="_blank">Terms of Use</a> for more details.</p>
                         </div>
                     </label>
-
+                    
+                    <div class="gender-wrapper">
+                        <h4>Add your gender experience</h4>
+                        <input class="styled-checkbox" id="radio-woman" type="radio" name="gender">
+                        <label for="radio-woman" class="lb-gender">Woman</label>
+                        <input class="styled-checkbox" id="radio-man" type="radio" name="gender">
+                        <label for="radio-man" class="lb-gender">Man</label>
+                        <input class="styled-checkbox" id="radio-other" type="radio" name="gender">
+                        <label for="radio-other" class="lb-gender">Other</label>
+                    </div>
+                    
                     <h4>Do you speak other languages?</h4>
                     <p class="text">If so, search and add up to 3 languages</p>
                     <select class="reg-demographic-selected reg-lang-selected" id="languages" name="categories[]" multiple="multiple" data-placeholder="Type here">

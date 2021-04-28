@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/main.min.css" rel="stylesheet">
+    <!-- Begin Inspectlet Asynchronous Code -->
+    <script type="text/javascript">
+        (function() {
+        window.__insp = window.__insp || [];
+        __insp.push(['wid', 2114839882]);
+        var ldinsp = function(){
+        if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=2114839882&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+        setTimeout(ldinsp, 0);
+        })();
+    </script>
+    <!-- End Inspectlet Asynchronous Code -->
+</head>
+<body>
+<a href="#" class="popup-opener" data-popup="confirm"><span class="icon-email"></span>Must Accept</a>
+<a href="#" class="popup-opener" data-popup="confirm-phone"><span class="icon-email"></span>Confirm phone</a>
+<a href="#" class="popup-opener" data-popup="confirm-phone-code"><span class="icon-email"></span>Confirm code</a>
+<a href="#" class="popup-opener" data-popup="was-verified"><span class="icon-email"></span>Was verified</a>
+
+<div class="popup-wrapper" id="confirm" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you accept">
+                <img src="images/security.svg" alt="">
+                <p>You must accept DiversePro's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> to proceed.</p>
+                <button class="btn btn-primary">I Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="confirm-phone" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you confirm">
+                <img src="images/security.svg" alt="">
+                <h2>Phone Verification</h2>
+                <p>To confirm you're not a bot and that this is your profile, please verify your profile by entering the mobile phone associated with your account.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Mobile Phone</label>
+                        <input type="text" placeholder="Type here">
+                    </div>
+                </form>
+                <button class="btn btn-primary">Send Code</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="confirm-phone-code" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you confirm">
+                <img src="images/security.svg" alt="">
+                <h2>Phone Verification</h2>
+                <p>Verification code has been sent to <a href="#">(847) 892-000</a>. <br>Please enter the verification code.</p>
+                <form>
+                    <div class="form-group">
+                        <label>Code</label>
+                        <input type="text" placeholder="6-digit code">
+                    </div>
+                </form>
+                <button class="btn btn-primary">Verify</button>
+                <p class="description">Didn't receive a code? <a href="#">Resend</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-wrapper" id="was-verified" hidden>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <button class="close">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        <div class="popup-content">
+            <div class="thank-you was-verified">
+                <img src="images/check.svg" alt="">
+                <h2>Thank you!</h2>
+                <p>Your mobile number <a href="#">(847) 892-000</a> was verified. </p>
+                <button class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/script.min.js"></script>
+</body>
+</html>

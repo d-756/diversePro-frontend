@@ -1,5 +1,9 @@
-# ignore node module
-/node_modules
+# Packages #
+node_modules/
 
 package-lock.json
 yarn.lock
+
+.vscode
+js/*.min.js
+css/

@@ -1,6 +1,7 @@
 $(window).on("load",function () {
     checkCookie();
-    var apiDomain = 'https://diversepro.api.creativeteam.io';
+    // var apiDomain = 'https://diversepro.api.creativeteam.io';
+  var apiDomain = "https://api.diversepro.com";
     var lang = Cookies.get("language");
     $("html").attr("lang", lang);
     //Privacy Policy

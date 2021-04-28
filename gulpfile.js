@@ -7,20 +7,21 @@ var plumber = require('gulp-plumber');
 var cssmin = require('gulp-cssmin');
 var rigger = require('gulp-rigger');
 // var rename = require('gulp-rename');
-var jsmin = require('gulp-uglify');
+// var jsmin = require('gulp-uglify');
+var jsmin = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
 var order = require("gulp-order");
 
 
 
-gulp.task('online', ['sass', 'svg|png|jpg' ,'jsmin', 'html'], function () {
+gulp.task('online', ['sass', 'svg|png|jpg', 'jsmin', 'html'], function () {
 
     browserSync.init({
-        port:8081,
-        open:true,
-        notify:false,
-        tunnel:false,
-        proxy:'localhost/diversepro'
+        port: 8081,
+        open: true,
+        notify: false,
+        tunnel: false,
+        proxy: 'localhost/diversepro'
     });
 
     gulp.watch('build/css/*.+(scss|css)', ['sass']);
@@ -29,45 +30,54 @@ gulp.task('online', ['sass', 'svg|png|jpg' ,'jsmin', 'html'], function () {
     gulp.watch('build/js/*.js', ['jsmin']);
 });
 
-gulp.task('sass',function () {
+gulp.task('sass', function () {
     gulp.src('build/css/*.+(scss|css)')
         .pipe(plumber())
         .pipe(order([
             '**/*',
             'main.scss'
         ]))
-        // .pipe(concat, ['main.scss'])
         .pipe(concat('main.min.css'))
-        .pipe(sass({outputStyle:'compressed'}))
-        .pipe(sass({errLogToConsole:true}))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(sass({
+            errLogToConsole: true
+        }))
         .pipe(autoprefixer({
-            browsers:['last 50 versions'],
-            cascade:false
+            browsers: ['last 50 versions'],
+            cascade: false
         }))
         .pipe(cssmin())
         .pipe(gulp.dest('css/'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('jsmin', function () {
     gulp.src('build/js/*.js')
         .pipe(order([
-            "jquery.js",
+            'jquery.min.js',
             "cleave.js",
+            'lodash.min.js',
+            'cloudinary-core.js',
             "wow.min.js",
             "croppie.js",
             "dropzone.js",
-            "jquery.fancybox.js",
             "select2.full.js",
+            "jquery.fancybox.min.js",
             'main.js',
             'api.js',
             'account-api.js',
-            '*.js'
+            '*.js',
         ]))
         .pipe(concat('script.min.js'))
         .pipe(jsmin())
         .pipe(gulp.dest('js/'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 // gulp.task('jsmin', function () {
 //     gulp.src('build/jsmain/*.js')
@@ -78,19 +88,22 @@ gulp.task('jsmin', function () {
 // });
 
 gulp.task('svg|png|jpg', function () {
-   gulp.src('build/images/*')
-       // .pipe(imagemin({progressive: true}))
-       .pipe(gulp.dest('images/'))
-       .pipe(browserSync.reload({stream:true}));
+    gulp.src('build/images/*')
+        // .pipe(imagemin({progressive: true}))
+        .pipe(gulp.dest('images/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 
-gulp.task('html',function () {
+gulp.task('html', function () {
     return gulp.src('build/html/pages/*.html')
         .pipe(rigger())
         .pipe(gulp.dest(''))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
-
-gulp.task('default',['online']);
+gulp.task('default', ['online']);
