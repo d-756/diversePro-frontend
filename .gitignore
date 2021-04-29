@@ -5,5 +5,5 @@ package-lock.json
 yarn.lock
 
 .vscode
-js/*.min.js
+js/
 css/
