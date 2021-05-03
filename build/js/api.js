@@ -10,6 +10,7 @@ $(document).ready(function () {
 
   // var apiDomain = "https://diversepro.api.creativeteam.io";
   var apiDomain = "https://api.diversepro.com";
+  // var apiDomain = "https://localhost:44383";
 
   $(".language-menu li").each(function () {
     if (Cookies.get("language") === $(this).find("a").attr("data-lang")) {

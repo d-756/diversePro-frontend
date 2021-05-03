@@ -3,6 +3,7 @@ $(document).ready(function () {
 
   // var apiDomain = "https://diversepro.api.creativeteam.io";
   var apiDomain = "https://api.diversepro.com";
+  // var apiDomain = "https://localhost:44383";
   //Account Main
   if ($("section").hasClass("acc-m")) {
     var attorneyId = Cookies.get("attorneyId");

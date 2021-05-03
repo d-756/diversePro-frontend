@@ -65,7 +65,7 @@ gulp.task('jsmin', function () {
             "wow.min.js",
             "croppie.js",
             "dropzone.js",
-            "select2.full.js",
+            "select2.min.js",
             "jquery.fancybox.min.js",
             'main.js',
             'api.js',
