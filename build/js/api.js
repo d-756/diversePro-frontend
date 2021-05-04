@@ -8,8 +8,9 @@ $(document).ready(function () {
   checkCookie();
   // $(".swipebox").swipebox();
 
-  // var apiDomain = "https://diversepro.api.creativeteam.io";
+  // production api
   var apiDomain = "https://api.diversepro.com";
+  // dev api
   // var apiDomain = "https://localhost:44383";
 
   $(".language-menu li").each(function () {

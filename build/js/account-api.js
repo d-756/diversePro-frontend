@@ -1,9 +1,11 @@
 $(document).ready(function () {
   checkCookie();
 
-  // var apiDomain = "https://diversepro.api.creativeteam.io";
+  // production api
   var apiDomain = "https://api.diversepro.com";
+  // dev api
   // var apiDomain = "https://localhost:44383";
+
   //Account Main
   if ($("section").hasClass("acc-m")) {
     var attorneyId = Cookies.get("attorneyId");
