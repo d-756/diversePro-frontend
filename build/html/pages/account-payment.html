@@ -104,11 +104,14 @@
                     </div>
                     <div class="form-group small">
                         <label for="bilzip">Zip</label>
-                        <input type="text" id="bilzip" placeholder="Type here">
+                        <input type="text" id="bilzip" placeholder="Type here" required>
                     </div>
                     <div class="form-group small">
                         <label for="promoCode">Discount</label>
-                        <input type="text" id="promoCode" placeholder="Type Discount Code">
+                        <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                        <div class="invalid-feedback">
+                            Invalid Promo Code!
+                        </div>
                     </div>
                     <div class="form-group small">
                         <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>

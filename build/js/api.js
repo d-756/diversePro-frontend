@@ -9,9 +9,10 @@ $(document).ready(function () {
   // $(".swipebox").swipebox();
 
   // production api
-  var apiDomain = "https://api.diversepro.com";
+  // var apiDomain = "https://api.diversepro.com";
   // dev api
-  // var apiDomain = "https://localhost:44383";
+  var apiDomain = "https://localhost:44383";
+  var coupon_id = null;
 
   $(".language-menu li").each(function () {
     if (Cookies.get("language") === $(this).find("a").attr("data-lang")) {
@@ -3713,6 +3714,20 @@ $(document).ready(function () {
                               '                        <label for="bilzip">Zip</label>\n' +
                               '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                               "                    </div>" +
+                              `<div class="form-group small">
+                                <label for="promoCode">Discount</label>
+                                <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                                <div class="invalid-feedback">
+                                    Invalid Promo Code!
+                                </div>
+                              </div>
+                              <div class="form-group small">
+                                  <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                              </div>
+                              <div class="form-group">
+                                  <label for="groupCode">Group</label>
+                                  <input type="text" id="groupCode" placeholder="Type Group ID">
+                              </div>`+
                               '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                               '                    <h5 class="tax-price">Sales tax: $<span>' +
                               Number.parseFloat(tax).toFixed(2) +
@@ -3910,6 +3925,20 @@ $(document).ready(function () {
                                     '                        <label for="bilzip">Zip</label>\n' +
                                     '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                                     "                    </div>\n" +
+                                    `<div class="form-group small">
+                                      <label for="promoCode">Discount</label>
+                                      <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                                      <div class="invalid-feedback">
+                                          Invalid Promo Code!
+                                      </div>
+                                    </div>
+                                    <div class="form-group small">
+                                        <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="groupCode">Group</label>
+                                        <input type="text" id="groupCode" placeholder="Type Group ID">
+                                    </div>`+
                                     '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                     '                    <h5 class="tax-price">Sales tax: $<span>' +
                                     Number.parseFloat(tax).toFixed(2) +
@@ -4094,6 +4123,20 @@ $(document).ready(function () {
                                 '                        <label for="bilzip">Zip</label>\n' +
                                 '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                                 "                    </div>\n" +
+                                `<div class="form-group small">
+                                  <label for="promoCode">Discount</label>
+                                  <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                                  <div class="invalid-feedback">
+                                      Invalid Promo Code!
+                                  </div>
+                                </div>
+                                <div class="form-group small">
+                                    <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="groupCode">Group</label>
+                                    <input type="text" id="groupCode" placeholder="Type Group ID">
+                                </div>`+
                                 '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                 '                    <h5 class="tax-price">Sales tax: $<span>' +
                                 Number.parseFloat(tax).toFixed(2) +
@@ -4352,6 +4395,20 @@ $(document).ready(function () {
                           '                        <label for="bilzip">Zip</label>\n' +
                           '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                           "                    </div>\n" +
+                          `<div class="form-group small">
+                            <label for="promoCode">Discount</label>
+                            <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                            <div class="invalid-feedback">
+                                Invalid Promo Code!
+                            </div>
+                          </div>
+                          <div class="form-group small">
+                              <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                          </div>
+                          <div class="form-group">
+                              <label for="groupCode">Group</label>
+                              <input type="text" id="groupCode" placeholder="Type Group ID">
+                          </div>`+
                           '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                           '                    <h5 class="tax-price">Sales tax: $<span>' +
                           Number.parseFloat(tax).toFixed(2) +
@@ -4549,6 +4606,20 @@ $(document).ready(function () {
                                 '                        <label for="bilzip">Zip</label>\n' +
                                 '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                                 "                    </div>\n" +
+                                `<div class="form-group small">
+                                  <label for="promoCode">Discount</label>
+                                  <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                                  <div class="invalid-feedback">
+                                      Invalid Promo Code!
+                                  </div>
+                                </div>
+                                <div class="form-group small">
+                                    <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                                </div>
+                                <div class="form-group">
+                                    <label for="groupCode">Group</label>
+                                    <input type="text" id="groupCode" placeholder="Type Group ID">
+                                </div>`+
                                 '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                 '                    <h5 class="tax-price">Sales tax: $<span>' +
                                 Number.parseFloat(tax).toFixed(2) +
@@ -4733,6 +4804,20 @@ $(document).ready(function () {
                             '                        <label for="bilzip">Zip</label>\n' +
                             '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                             "                    </div>\n" +
+                            `<div class="form-group small">
+                              <label for="promoCode">Discount</label>
+                              <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                              <div class="invalid-feedback">
+                                  Invalid Promo Code!
+                              </div>
+                            </div>
+                            <div class="form-group small">
+                                <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                            </div>
+                            <div class="form-group">
+                                <label for="groupCode">Group</label>
+                                <input type="text" id="groupCode" placeholder="Type Group ID">
+                            </div>`+
                             '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                             '                    <h5 class="tax-price">Sales tax: $<span>' +
                             Number.parseFloat(tax).toFixed(2) +
@@ -5037,6 +5122,20 @@ $(document).ready(function () {
                   '                        <label for="bilzip">Zip</label>\n' +
                   '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                   "                    </div>\n" +
+                  `<div class="form-group small">
+                    <label for="promoCode">Discount</label>
+                    <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                    <div class="invalid-feedback">
+                        Invalid Promo Code!
+                    </div>
+                  </div>
+                  <div class="form-group small">
+                      <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                  </div>
+                  <div class="form-group">
+                      <label for="groupCode">Group</label>
+                      <input type="text" id="groupCode" placeholder="Type Group ID">
+                  </div>`+
                   '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                   '                    <h5 class="tax-price">Sales tax: $<span>' +
                   Number.parseFloat(tax).toFixed(2) +
@@ -5233,6 +5332,20 @@ $(document).ready(function () {
                         '                        <label for="bilzip">Zip</label>\n' +
                         '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                         "                    </div>\n" +
+                        `<div class="form-group small">
+                          <label for="promoCode">Discount</label>
+                          <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                          <div class="invalid-feedback">
+                              Invalid Promo Code!
+                          </div>
+                        </div>
+                        <div class="form-group small">
+                            <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="groupCode">Group</label>
+                            <input type="text" id="groupCode" placeholder="Type Group ID">
+                        </div>`+
                         '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                         '                    <h5 class="tax-price">Sales tax: $<span>' +
                         Number.parseFloat(tax).toFixed(2) +
@@ -5417,6 +5530,20 @@ $(document).ready(function () {
                     '                        <label for="bilzip">Zip</label>\n' +
                     '                        <input type="text" id="bilzip" placeholder="Type here">\n' +
                     "                    </div>\n" +
+                    `<div class="form-group small">
+                      <label for="promoCode">Discount</label>
+                      <input type="text" id="promoCode" class="form-control" placeholder="Type Discount Code">
+                      <div class="invalid-feedback">
+                          Invalid Promo Code!
+                      </div>
+                    </div>
+                    <div class="form-group small">
+                        <button type="button" id="btn-apply-promocode" class="btn btn-primary">Apply</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="groupCode">Group</label>
+                        <input type="text" id="groupCode" placeholder="Type Group ID">
+                    </div>`+
                     '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                     '                    <h5 class="tax-price">Sales tax: $<span>' +
                     Number.parseFloat(tax).toFixed(2) +
@@ -5481,13 +5608,19 @@ $(document).ready(function () {
   $(document).on("change", ".register .pci #bilstate", function (e) {
     // console.log("step9 state value ----------:", $(this).val());
     var state = $(this).val();
+    Cookies.set("state", state);
     var attorneyId = Cookies.get("attorneyId");
     var planId = Cookies.get("planId");
+    var url = coupon_id != null ? apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state + "&coupon=" + coupon_id : apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state;
     $.ajax({
       type: "GET",
-      url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state,
+      url: url,
+      beforeSend: function () {
+        $("body").addClass("loading");
+      },
       success: function (res) {
         // console.log("=======", res);
+        $("body").removeClass("loading");
         var tax = res["taxAmount"];
         var total = res["totalAmount"];
         $(".register .pci .tax-price span").text(Number.parseFloat(tax).toFixed(2))
@@ -5512,6 +5645,7 @@ $(document).ready(function () {
     var planId = Cookies.get("planId");
     var productId = Cookies.get("productId");
     var cvc, number, exp, city, states, zips, name, address, suite;
+    var groupCode = '';
     if ($("#visa").hasClass("active")) {
       cvc = $("#cvc").val();
       number = $("#cardnumber").val();
@@ -5522,6 +5656,7 @@ $(document).ready(function () {
       name = $("#cardholdername").val();
       address = $("#biladdress").val();
       suite = $("#bilsuite").val();
+      groupCode = $("#groupCode").val();
     } else if ($("#paypal").hasClass("active")) {
       cvc = $("#paypal-cvc").val();
       number = $("#paypal-cardnumber").val();
@@ -5558,6 +5693,8 @@ $(document).ready(function () {
         state: states,
         zip: zips,
         name: name,
+        couponId: coupon_id,
+        groupCode: groupCode,
       }),
       success: function () {
         $("#success-payment").attr("hidden", false);

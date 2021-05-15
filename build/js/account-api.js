@@ -2,9 +2,10 @@ $(document).ready(function () {
   checkCookie();
 
   // production api
-  var apiDomain = "https://api.diversepro.com";
+  // var apiDomain = "https://api.diversepro.com";
   // dev api
-  // var apiDomain = "https://localhost:44383";
+  var apiDomain = "https://localhost:44383";
+  var coupon_id = null;
 
   //Account Main
   if ($("section").hasClass("acc-m")) {
@@ -661,6 +662,8 @@ $(document).ready(function () {
     }
   });
 
+  // subscription cost object
+
   //Account payment
   if ($("section").hasClass("acc-pay")) {
     var queryString = window.location.search;
@@ -681,15 +684,16 @@ $(document).ready(function () {
       type: "GET",
       url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&PlanId=" + planId + "&State=" + state,
       success: function (res) {
+        console.log("--------", res);
+        var subscriptionUpgradeCost = res['subscriptionCost'];
         var tax = res["taxAmount"];
-        var subscriptionCost = res["subscriptionCost"];
         var totalAmount = res["totalAmount"];
         // $(".cost-price span").html(Number.parseFloat(price).toFixed(2));
         // $(".tax-price span").html(Number.parseFloat(tax).toFixed(2));
         // $(".total-price span").html(
         //   (Number.parseFloat(price) + Number.parseFloat(tax)).toFixed(2)
         // );
-        $(".cost-price span").html(Number.parseFloat(subscriptionCost).toFixed(2));
+        $(".cost-price span").html(Number.parseFloat(subscriptionUpgradeCost).toFixed(2));
         $(".tax-price span").html(Number.parseFloat(tax).toFixed(2));
         $(".total-price span").html(Number.parseFloat(totalAmount).toFixed(2));
       },
@@ -726,25 +730,32 @@ $(document).ready(function () {
   */
 
  $(document).on("change", ".account-contact .pci #bilstate", function (e) {
-   var state = $(this).val();
-   var attorneyId = Cookies.get("attorneyId");
-   var planId = Cookies.get("planId");
-   $.ajax({
-     type: "GET",
-     url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state,
-     success: function (res) {
-       var tax = res["taxAmount"];
-       var total = res["totalAmount"];
-       $(".account-contact .pci .tax-price span").text(Number.parseFloat(tax).toFixed(2))
-       $(".account-contact .pci .total-price span").text(Number.parseFloat(total).toFixed(2))
-     }
-   });
- })
-
+    var state = $(this).val();
+    Cookies.set("state", state);
+    var attorneyId = Cookies.get("attorneyId");
+    var planId = Cookies.get("planId");
+    var url = coupon_id != null ? apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state + "&coupon=" + coupon_id : apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&planId=" + planId + "&state=" + state;
+    $.ajax({
+      type: "GET",
+      url: url,
+      beforeSend: function () {
+        $("body").addClass("loading");
+      },
+      success: function (res) {
+        // console.log("change state:", res);
+        $("body").removeClass("loading");
+        var tax = res["taxAmount"];
+        var total = res["totalAmount"];
+        $(".account-contact .pci .tax-price span").text(Number.parseFloat(tax).toFixed(2));
+        $(".account-contact .pci .total-price span").text(Number.parseFloat(total).toFixed(2));
+      }
+    });
+ });
+ 
   $(document).on("submit", ".account-contact .pci", function (e) {
     e.preventDefault();
     smoothScroll();
-
+    // console.log("coupon_id", coupon_id);
     var token = Cookies.get("token");
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
@@ -762,6 +773,7 @@ $(document).ready(function () {
     var name = '';
     var address = '';
     var suite = '';
+    var groupCode = '';
     if ($("#visa").hasClass("active")) {
       cvc = $("#cvc").val();
       number = $("#cardnumber").val();
@@ -772,6 +784,7 @@ $(document).ready(function () {
       name = $("#cardholdername").val();
       address = $("#biladdress").val();
       suite = $("#bilsuite").val();
+      groupCode = $("#groupCode").val();
     } else if ($("#paypal").hasClass("active")) {
       cvc = $("#paypal-cvc").val();
       number = $("#paypal-cardnumber").val();
@@ -805,6 +818,8 @@ $(document).ready(function () {
         state: states,
         zip: zips,
         name: name,
+        couponId: coupon_id,
+        groupCode: groupCode,
       }),
       beforeSend: function () {
         $("body").addClass("loading");
@@ -814,6 +829,9 @@ $(document).ready(function () {
         $("#success-payment").attr("hidden", false);
         $("#success-payment").attr("data-plan", plan);
         Cookies.set("attorneyPlan", plan);
+      },
+      complete: function () {
+        $("body").removeClass("loading");
       },
     });
   });
@@ -1561,5 +1579,56 @@ $(document).ready(function () {
         location.href = "account-main.html";
       },
     });
+  });
+
+  // Promo Code
+  $(document).on('click', '#btn-apply-promocode', function(e) {
+    var promoCode = $('#promoCode').val();
+    if (promoCode != '') {
+      $.ajax({
+        type: "GET",
+        url: apiDomain + "/Attorney/Coupon/" + promoCode,
+        success: function (res) {
+          console.log("!!!!!!!!!", res, attorneyId, planId, state);
+          if(res != null && res.id) {
+            $("#promoCode").removeClass("is-invalid");
+            var promo_obj = res;
+            var coupon_obj = promo_obj.coupon;
+            coupon_id = coupon_obj.id;
+            var attorneyId = Cookies.get("attorneyId");
+            var state = Cookies.get("state");
+            var planId = Cookies.get("planId");
+            $.ajax({
+              type: "GET",
+              url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&PlanId=" + planId + "&State=" + state + "&Coupon=" + coupon_id,
+              beforeSend: function () {
+                $("body").addClass("loading");
+              },
+              success: function (res) {
+                console.log("+++++", res);
+                $("body").removeClass("loading");
+                var subscriptionUpgradecost = Number.parseFloat(res['subscriptionCost'] - res['discountAmount']).toFixed(2);
+                var subscriptionUpgradeCostHtml = res['discountAmount'] != 0 
+                                                  ? `${subscriptionUpgradecost} <i><del>${res['subscriptionCost']}</del></i>`
+                                                  : `${subscriptionUpgradecost}`;
+                $(".cost-price span").html(subscriptionUpgradeCostHtml);
+                $(".tax-price span").html(`${res['taxAmount']}`);
+                $(".total-price span").html(`${res['totalAmount']}`);
+              }
+            });
+          } else {
+            $("#promoCode").addClass("is-invalid");
+            setTimeout(() => {
+              $("#promoCode").removeClass("is-invalid");
+            }, 3000);
+          }
+        },
+      });
+    } else {
+      $("#promoCode").addClass("is-invalid");
+      setTimeout(() => {
+        $("#promoCode").removeClass("is-invalid");
+      }, 3000);
+    }
   });
 });
