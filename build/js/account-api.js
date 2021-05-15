@@ -2,9 +2,9 @@ $(document).ready(function () {
   checkCookie();
 
   // production api
-  // var apiDomain = "https://api.diversepro.com";
+  var apiDomain = "https://api.diversepro.com";
   // dev api
-  var apiDomain = "https://localhost:44383";
+  // var apiDomain = "https://localhost:44383";
   var coupon_id = null;
 
   //Account Main
