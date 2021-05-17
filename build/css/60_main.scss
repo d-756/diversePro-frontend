@@ -233,3 +233,9 @@ input {
 .lb-gender {
   margin-bottom: 10px !important;
 }
+
+// dropzone upload image size
+.from-step8 .dropzone img {
+  width: 50px;
+  margin: 0 auto;
+}

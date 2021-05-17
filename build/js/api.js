@@ -2377,7 +2377,7 @@ $(document).ready(function () {
               $("body").addClass("loading");
             },
             success: function (res) {
-              console.log("------- response on the preview page of step 8", res);
+              // console.log("------- response on the preview page of step 8", res);
               $("body").removeClass("loading");
               var id = res["id"];
               var name = res["fullName"];

@@ -684,7 +684,7 @@ $(document).ready(function () {
       type: "GET",
       url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&PlanId=" + planId + "&State=" + state,
       success: function (res) {
-        console.log("--------", res);
+        // console.log("--------", res);
         var subscriptionUpgradeCost = res['subscriptionCost'];
         var tax = res["taxAmount"];
         var totalAmount = res["totalAmount"];
@@ -1589,7 +1589,7 @@ $(document).ready(function () {
         type: "GET",
         url: apiDomain + "/Attorney/Coupon/" + promoCode,
         success: function (res) {
-          console.log("!!!!!!!!!", res, attorneyId, planId, state);
+          // console.log("!!!!!!!!!", res, attorneyId, planId, state);
           if(res != null && res.id) {
             $("#promoCode").removeClass("is-invalid");
             var promo_obj = res;
@@ -1605,7 +1605,7 @@ $(document).ready(function () {
                 $("body").addClass("loading");
               },
               success: function (res) {
-                console.log("+++++", res);
+                // console.log("+++++", res);
                 $("body").removeClass("loading");
                 var subscriptionUpgradecost = Number.parseFloat(res['subscriptionCost'] - res['discountAmount']).toFixed(2);
                 var subscriptionUpgradeCostHtml = res['discountAmount'] != 0 
