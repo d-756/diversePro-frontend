@@ -3627,7 +3627,7 @@ $(document).ready(function () {
                               "                    </div>\n" +
                               '                    <div class="form-group small">\n' +
                               '                        <label for="CVC">CVC</label>\n' +
-                              '                        <input type="password" id="cvc" required>\n' +
+                              '                        <input type="password" id="cvc" required maxlength="3">\n' +
                               "                    </div>\n" +
                               "                    <h3>Billing address</h3>\n" +
                               '                    <div class="form-group">\n' +
@@ -3726,7 +3726,7 @@ $(document).ready(function () {
                               </div>
                               <div class="form-group">
                                   <label for="groupCode">Group</label>
-                                  <input type="text" id="groupCode" placeholder="Type Group ID">
+                                  <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                               </div>`+
                               '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                               '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -3838,7 +3838,7 @@ $(document).ready(function () {
                                     "                    </div>\n" +
                                     '                    <div class="form-group small">\n' +
                                     '                        <label for="cvc">CVC</label>\n' +
-                                    '                        <input type="password" id="cvc" required>\n' +
+                                    '                        <input type="password" id="cvc" required maxlength="3">\n' +
                                     "                    </div>\n" +
                                     "                    <h3>Billing address</h3>\n" +
                                     '                    <div class="form-group">\n' +
@@ -3937,7 +3937,7 @@ $(document).ready(function () {
                                     </div>
                                     <div class="form-group">
                                         <label for="groupCode">Group</label>
-                                        <input type="text" id="groupCode" placeholder="Type Group ID">
+                                        <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                                     </div>`+
                                     '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                     '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -4036,7 +4036,7 @@ $(document).ready(function () {
                                 "                    </div>\n" +
                                 '                    <div class="form-group small">\n' +
                                 '                        <label for="cvc">CVC</label>\n' +
-                                '                        <input type="password" id="cvc" required>\n' +
+                                '                        <input type="password" id="cvc" required maxlength="3">\n' +
                                 "                    </div>\n" +
                                 "                    <h3>Billing address</h3>\n" +
                                 '                    <div class="form-group">\n' +
@@ -4135,7 +4135,7 @@ $(document).ready(function () {
                                 </div>
                                 <div class="form-group">
                                     <label for="groupCode">Group</label>
-                                    <input type="text" id="groupCode" placeholder="Type Group ID">
+                                    <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                                 </div>`+
                                 '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                 '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -4308,7 +4308,7 @@ $(document).ready(function () {
                           "                    </div>\n" +
                           '                    <div class="form-group small">\n' +
                           '                        <label for="CVC">CVC</label>\n' +
-                          '                        <input type="password" id="cvc" required>\n' +
+                          '                        <input type="password" id="cvc" required maxlength="3">\n' +
                           "                    </div>\n" +
                           "                    <h3>Billing address</h3>\n" +
                           '                    <div class="form-group">\n' +
@@ -4407,7 +4407,7 @@ $(document).ready(function () {
                           </div>
                           <div class="form-group">
                               <label for="groupCode">Group</label>
-                              <input type="text" id="groupCode" placeholder="Type Group ID">
+                              <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                           </div>`+
                           '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                           '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -4519,7 +4519,7 @@ $(document).ready(function () {
                                 "                    </div>\n" +
                                 '                    <div class="form-group small">\n' +
                                 '                        <label for="cvc">CVC</label>\n' +
-                                '                        <input type="password" id="cvc" required>\n' +
+                                '                        <input type="password" id="cvc" required maxlength="3">\n' +
                                 "                    </div>\n" +
                                 "                    <h3>Billing address</h3>\n" +
                                 '                    <div class="form-group">\n' +
@@ -4618,7 +4618,7 @@ $(document).ready(function () {
                                 </div>
                                 <div class="form-group">
                                     <label for="groupCode">Group</label>
-                                    <input type="text" id="groupCode" placeholder="Type Group ID">
+                                    <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                                 </div>`+
                                 '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                                 '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -4717,7 +4717,7 @@ $(document).ready(function () {
                             "                    </div>\n" +
                             '                    <div class="form-group small">\n' +
                             '                        <label for="cvc">CVC</label>\n' +
-                            '                        <input type="password" id="cvc" required>\n' +
+                            '                        <input type="password" id="cvc" required maxlength="3">\n' +
                             "                    </div>\n" +
                             "                    <h3>Billing address</h3>\n" +
                             '                    <div class="form-group">\n' +
@@ -4816,7 +4816,7 @@ $(document).ready(function () {
                             </div>
                             <div class="form-group">
                                 <label for="groupCode">Group</label>
-                                <input type="text" id="groupCode" placeholder="Type Group ID">
+                                <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                             </div>`+
                             '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                             '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -5035,7 +5035,7 @@ $(document).ready(function () {
                   "                    </div>\n" +
                   '                    <div class="form-group small">\n' +
                   '                        <label for="CVC">CVC</label>\n' +
-                  '                        <input type="password" id="cvc" required>\n' +
+                  '                        <input type="password" id="cvc" required maxlength="3">\n' +
                   "                    </div>\n" +
                   "                    <h3>Billing address</h3>\n" +
                   '                    <div class="form-group">\n' +
@@ -5134,7 +5134,7 @@ $(document).ready(function () {
                   </div>
                   <div class="form-group">
                       <label for="groupCode">Group</label>
-                      <input type="text" id="groupCode" placeholder="Type Group ID">
+                      <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                   </div>`+
                   '                    <h5 class="cost-price">Annual subscription cost: $<span>299.88</span></h5>\n' +
                   '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -5344,7 +5344,7 @@ $(document).ready(function () {
                         </div>
                         <div class="form-group">
                             <label for="groupCode">Group</label>
-                            <input type="text" id="groupCode" placeholder="Type Group ID">
+                            <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                         </div>`+
                         '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                         '                    <h5 class="tax-price">Sales tax: $<span>' +
@@ -5542,7 +5542,7 @@ $(document).ready(function () {
                     </div>
                     <div class="form-group">
                         <label for="groupCode">Group</label>
-                        <input type="text" id="groupCode" placeholder="Type Group ID">
+                        <input type="text" id="groupCode" placeholder="Type Group ID" maxlength="10">
                     </div>`+
                     '                    <h5 class="cost-price">Annual subscription cost: $<span>599.88</span></h5>\n' +
                     '                    <h5 class="tax-price">Sales tax: $<span>' +
