@@ -5619,7 +5619,7 @@ $(document).ready(function () {
         $("body").addClass("loading");
       },
       success: function (res) {
-        // console.log("=======", res);
+        // console.log("=======", res, coupon_id);
         $("body").removeClass("loading");
         var tax = res["taxAmount"];
         var total = res["totalAmount"];
@@ -8802,4 +8802,55 @@ $(document).ready(function () {
       })
       .render("#paypal-button-container");
   }
+
+  // Promo Code
+  $(document).on('click', '#btn-apply-promocode', function(e) {
+    var promoCode = $('#promoCode').val();
+    if (promoCode != '') {
+      $.ajax({
+        type: "GET",
+        url: apiDomain + "/Attorney/Coupon/" + promoCode,
+        success: function (res) {
+          // console.log("!!!!!!!!!", res, attorneyId, planId, state);
+          if(res != null && res.id) {
+            $("#promoCode").removeClass("is-invalid");
+            var promo_obj = res;
+            var coupon_obj = promo_obj.coupon;
+            coupon_id = coupon_obj.id;
+            var attorneyId = Cookies.get("attorneyId");
+            var state = Cookies.get("state");
+            var planId = Cookies.get("planId");
+            $.ajax({
+              type: "GET",
+              url: apiDomain + "/Attorney/GetSubscriptionCost?AttorneyId=" + attorneyId + "&PlanId=" + planId + "&State=" + state + "&Coupon=" + coupon_id,
+              beforeSend: function () {
+                $("body").addClass("loading");
+              },
+              success: function (res) {
+                // console.log("+++++", res);
+                $("body").removeClass("loading");
+                var subscriptionUpgradecost = Number.parseFloat(res['subscriptionCost'] - res['discountAmount']).toFixed(2);
+                var subscriptionUpgradeCostHtml = res['discountAmount'] != 0 
+                                                  ? `${subscriptionUpgradecost} <i><del>${res['subscriptionCost']}</del></i>`
+                                                  : `${subscriptionUpgradecost}`;
+                $(".cost-price span").html(subscriptionUpgradeCostHtml);
+                $(".tax-price span").html(`${res['taxAmount']}`);
+                $(".total-price span").html(`${res['totalAmount']}`);
+              }
+            });
+          } else {
+            $("#promoCode").addClass("is-invalid");
+            setTimeout(() => {
+              $("#promoCode").removeClass("is-invalid");
+            }, 3000);
+          }
+        },
+      });
+    } else {
+      $("#promoCode").addClass("is-invalid");
+      setTimeout(() => {
+        $("#promoCode").removeClass("is-invalid");
+      }, 3000);
+    }
+  });
 });
